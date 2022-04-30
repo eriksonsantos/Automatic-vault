@@ -1,0 +1,1173 @@
+TimeQuest Timing Analyzer report for cofreAutomatico
+Thu Nov 05 17:00:40 2020
+Quartus II 64-Bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. TimeQuest Timing Analyzer Summary
+  3. Parallel Compilation
+  4. Clocks
+  5. Slow Model Fmax Summary
+  6. Slow Model Setup Summary
+  7. Slow Model Hold Summary
+  8. Slow Model Recovery Summary
+  9. Slow Model Removal Summary
+ 10. Slow Model Minimum Pulse Width Summary
+ 11. Slow Model Setup: 'clock'
+ 12. Slow Model Hold: 'clock'
+ 13. Slow Model Minimum Pulse Width: 'clock'
+ 14. Setup Times
+ 15. Hold Times
+ 16. Clock to Output Times
+ 17. Minimum Clock to Output Times
+ 18. Fast Model Setup Summary
+ 19. Fast Model Hold Summary
+ 20. Fast Model Recovery Summary
+ 21. Fast Model Removal Summary
+ 22. Fast Model Minimum Pulse Width Summary
+ 23. Fast Model Setup: 'clock'
+ 24. Fast Model Hold: 'clock'
+ 25. Fast Model Minimum Pulse Width: 'clock'
+ 26. Setup Times
+ 27. Hold Times
+ 28. Clock to Output Times
+ 29. Minimum Clock to Output Times
+ 30. Multicorner Timing Analysis Summary
+ 31. Setup Times
+ 32. Hold Times
+ 33. Clock to Output Times
+ 34. Minimum Clock to Output Times
+ 35. Setup Transfers
+ 36. Hold Transfers
+ 37. Report TCCS
+ 38. Report RSKM
+ 39. Unconstrained Paths
+ 40. TimeQuest Timing Analyzer Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 1991-2013 Altera Corporation
+Your use of Altera Corporation's design tools, logic functions 
+and other software and tools, and its AMPP partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Altera Program License 
+Subscription Agreement, Altera MegaCore Function License 
+Agreement, or other applicable license agreement, including, 
+without limitation, that your use is for the sole purpose of 
+programming logic devices manufactured by Altera and sold by 
+Altera or its authorized distributors.  Please refer to the 
+applicable agreement for further details.
+
+
+
++----------------------------------------------------------------------------------------+
+; TimeQuest Timing Analyzer Summary                                                      ;
++--------------------+-------------------------------------------------------------------+
+; Quartus II Version ; Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition ;
+; Revision Name      ; cofreAutomatico                                                   ;
+; Device Family      ; Cyclone II                                                        ;
+; Device Name        ; EP2C35F672C6                                                      ;
+; Timing Models      ; Final                                                             ;
+; Delay Model        ; Combined                                                          ;
+; Rise/Fall Delays   ; Unavailable                                                       ;
++--------------------+-------------------------------------------------------------------+
+
+
+Parallel compilation was disabled, but you have multiple processors available. Enable parallel compilation to reduce compilation time.
++-------------------------------------+
+; Parallel Compilation                ;
++----------------------------+--------+
+; Processors                 ; Number ;
++----------------------------+--------+
+; Number detected on machine ; 8      ;
+; Maximum allowed            ; 1      ;
++----------------------------+--------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Clocks                                                                                                                                                                            ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; Clock Name ; Type ; Period ; Frequency  ; Rise  ; Fall  ; Duty Cycle ; Divide by ; Multiply by ; Phase ; Offset ; Edge List ; Edge Shift ; Inverted ; Master ; Source ; Targets   ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+; clock      ; Base ; 1.000  ; 1000.0 MHz ; 0.000 ; 0.500 ;            ;           ;             ;       ;        ;           ;            ;          ;        ;        ; { clock } ;
++------------+------+--------+------------+-------+-------+------------+-----------+-------------+-------+--------+-----------+------------+----------+--------+--------+-----------+
+
+
++----------------------------------------------------------------------------------------------------------+
+; Slow Model Fmax Summary                                                                                  ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; Fmax      ; Restricted Fmax ; Clock Name ; Note                                                          ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+; 494.8 MHz ; 420.17 MHz      ; clock      ; limit due to minimum period restriction (max I/O toggle rate) ;
++-----------+-----------------+------------+---------------------------------------------------------------+
+This panel reports FMAX for every clock in the design, regardless of the user-specified clock periods.  FMAX is only computed for paths where the source and destination registers or ports are driven by the same clock.  Paths of different clocks, including generated clocks, are ignored.  For paths between a clock and its inversion, FMAX is computed as if the rising and falling edges are scaled along with FMAX, such that the duty cycle (in terms of a percentage) is maintained. Altera recommends that you always use clock constraints and other slack reports for sign-off analysis.
+
+
++--------------------------------+
+; Slow Model Setup Summary       ;
++-------+--------+---------------+
+; Clock ; Slack  ; End Point TNS ;
++-------+--------+---------------+
+; clock ; -1.021 ; -11.557       ;
++-------+--------+---------------+
+
+
++-------------------------------+
+; Slow Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.391 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Slow Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Slow Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Slow Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -32.380               ;
++-------+--------+-----------------------+
+
+
++------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Setup: 'clock'                                                                                                                                                                                              ;
++--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack  ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; -1.021 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 2.056      ;
+; -1.020 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 2.055      ;
+; -0.979 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 2.014      ;
+; -0.978 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 2.013      ;
+; -0.971 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 2.007      ;
+; -0.970 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 2.006      ;
+; -0.936 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.972      ;
+; -0.935 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 1.971      ;
+; -0.885 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 1.920      ;
+; -0.884 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 1.919      ;
+; -0.864 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 1.899      ;
+; -0.863 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 1.898      ;
+; -0.851 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 1.886      ;
+; -0.850 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 1.885      ;
+; -0.839 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.875      ;
+; -0.838 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 1.874      ;
+; -0.824 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.860      ;
+; -0.823 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 1.859      ;
+; -0.800 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.836      ;
+; -0.799 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 1.835      ;
+; -0.735 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 1.770      ;
+; -0.735 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 1.770      ;
+; -0.734 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 1.769      ;
+; -0.734 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 1.769      ;
+; -0.727 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; 0.000      ; 1.763      ;
+; -0.726 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; 0.000      ; 1.762      ;
+; -0.690 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.726      ;
+; -0.689 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 1.725      ;
+; -0.688 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.724      ;
+; -0.687 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 1.723      ;
+; -0.674 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; 0.000      ; 1.710      ;
+; -0.673 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; 0.000      ; 1.709      ;
+; -0.669 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.705      ;
+; -0.669 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.705      ;
+; -0.653 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; 0.000      ; 1.689      ;
+; -0.648 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 1.000        ; 0.000      ; 1.684      ;
+; -0.642 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; -0.001     ; 1.677      ;
+; -0.641 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; -0.001     ; 1.676      ;
+; -0.625 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 1.661      ;
+; -0.608 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 1.643      ;
+; -0.607 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 1.642      ;
+; -0.595 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 1.000        ; 0.001      ; 1.632      ;
+; -0.574 ; blocoDeControle:chamarBlocoDeControle|A                            ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; 0.000      ; 1.610      ;
+; -0.574 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.610      ;
+; -0.574 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.610      ;
+; -0.553 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; 0.000      ; 1.589      ;
+; -0.552 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.588      ;
+; -0.551 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 1.587      ;
+; -0.547 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 1.000        ; 0.000      ; 1.583      ;
+; -0.546 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; 0.000      ; 1.582      ;
+; -0.522 ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 1.000        ; 0.001      ; 1.559      ;
+; -0.501 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; -0.001     ; 1.536      ;
+; -0.479 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 1.000        ; 0.001      ; 1.516      ;
+; -0.467 ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; 0.000      ; 1.503      ;
+; -0.466 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; -0.001     ; 1.501      ;
+; -0.463 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.001      ; 1.500      ;
+; -0.445 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; 0.000      ; 1.481      ;
+; -0.392 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; -0.001     ; 1.427      ;
+; -0.367 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; -0.001     ; 1.402      ;
+; -0.302 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; clock        ; clock       ; 1.000        ; 0.001      ; 1.339      ;
+; -0.302 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; clock        ; clock       ; 1.000        ; 0.001      ; 1.339      ;
+; -0.302 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; clock        ; clock       ; 1.000        ; 0.001      ; 1.339      ;
+; -0.302 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; clock        ; clock       ; 1.000        ; 0.001      ; 1.339      ;
+; -0.302 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; clock        ; clock       ; 1.000        ; 0.001      ; 1.339      ;
+; -0.302 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; clock        ; clock       ; 1.000        ; 0.001      ; 1.339      ;
+; -0.302 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; clock        ; clock       ; 1.000        ; 0.001      ; 1.339      ;
+; -0.302 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; clock        ; clock       ; 1.000        ; 0.001      ; 1.339      ;
+; -0.295 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; 0.000      ; 1.331      ;
+; -0.276 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; -0.001     ; 1.311      ;
+; -0.273 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; 0.000      ; 1.309      ;
+; -0.267 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.001      ; 1.304      ;
+; -0.266 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; -0.001     ; 1.301      ;
+; -0.255 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; -0.001     ; 1.290      ;
+; -0.254 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 1.000        ; -0.001     ; 1.289      ;
+; -0.241 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 1.000        ; 0.001      ; 1.278      ;
+; -0.226 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 1.000        ; 0.001      ; 1.263      ;
+; -0.168 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.204      ;
+; -0.168 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.204      ;
+; -0.168 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.204      ;
+; -0.168 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.204      ;
+; -0.168 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.204      ;
+; -0.168 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.204      ;
+; -0.168 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.204      ;
+; -0.168 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; clock        ; clock       ; 1.000        ; 0.000      ; 1.204      ;
+; 0.007  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; -0.001     ; 1.028      ;
+; 0.037  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; -0.001     ; 0.998      ;
+; 0.038  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 1.000        ; -0.001     ; 0.997      ;
+; 0.052  ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; clock        ; clock       ; 1.000        ; -0.001     ; 0.983      ;
+; 0.103  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 1.000        ; 0.000      ; 0.933      ;
+; 0.231  ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 1.000        ; 0.000      ; 0.805      ;
+; 0.235  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.801      ;
+; 0.239  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.797      ;
+; 0.379  ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; blocoDeControle:chamarBlocoDeControle|P                            ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
+; 0.379  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.657      ;
++--------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Hold: 'clock'                                                                                                                                                                                              ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.391 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.391 ; blocoDeControle:chamarBlocoDeControle|P                            ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.657      ;
+; 0.531 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.797      ;
+; 0.535 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.801      ;
+; 0.535 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.801      ;
+; 0.539 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.667 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.933      ;
+; 0.718 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; clock        ; clock       ; 0.000        ; -0.001     ; 0.983      ;
+; 0.732 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 0.000        ; -0.001     ; 0.997      ;
+; 0.733 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; -0.001     ; 0.998      ;
+; 0.763 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; -0.001     ; 1.028      ;
+; 0.841 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.107      ;
+; 0.938 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 0.938 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 0.938 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 0.938 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 0.938 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 0.938 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 0.938 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 0.938 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.204      ;
+; 0.996 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 0.000        ; 0.001      ; 1.263      ;
+; 1.011 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 0.000        ; 0.001      ; 1.278      ;
+; 1.024 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 0.000        ; -0.001     ; 1.289      ;
+; 1.025 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; -0.001     ; 1.290      ;
+; 1.036 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; -0.001     ; 1.301      ;
+; 1.037 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.001      ; 1.304      ;
+; 1.043 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; 0.000      ; 1.309      ;
+; 1.046 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; -0.001     ; 1.311      ;
+; 1.065 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.331      ;
+; 1.072 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; clock        ; clock       ; 0.000        ; 0.001      ; 1.339      ;
+; 1.072 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; clock        ; clock       ; 0.000        ; 0.001      ; 1.339      ;
+; 1.072 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; clock        ; clock       ; 0.000        ; 0.001      ; 1.339      ;
+; 1.072 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; clock        ; clock       ; 0.000        ; 0.001      ; 1.339      ;
+; 1.072 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; clock        ; clock       ; 0.000        ; 0.001      ; 1.339      ;
+; 1.072 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; clock        ; clock       ; 0.000        ; 0.001      ; 1.339      ;
+; 1.072 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; clock        ; clock       ; 0.000        ; 0.001      ; 1.339      ;
+; 1.072 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; clock        ; clock       ; 0.000        ; 0.001      ; 1.339      ;
+; 1.137 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; -0.001     ; 1.402      ;
+; 1.162 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; -0.001     ; 1.427      ;
+; 1.215 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.481      ;
+; 1.233 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.001      ; 1.500      ;
+; 1.236 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; -0.001     ; 1.501      ;
+; 1.237 ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; 0.000      ; 1.503      ;
+; 1.249 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 0.000        ; 0.001      ; 1.516      ;
+; 1.271 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; -0.001     ; 1.536      ;
+; 1.292 ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 0.000        ; 0.001      ; 1.559      ;
+; 1.316 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.582      ;
+; 1.317 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 0.000        ; 0.000      ; 1.583      ;
+; 1.321 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.587      ;
+; 1.322 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.588      ;
+; 1.323 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.589      ;
+; 1.344 ; blocoDeControle:chamarBlocoDeControle|A                            ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.610      ;
+; 1.365 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 0.000        ; 0.001      ; 1.632      ;
+; 1.377 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 1.642      ;
+; 1.378 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 1.643      ;
+; 1.395 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.661      ;
+; 1.411 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; -0.001     ; 1.676      ;
+; 1.412 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; -0.001     ; 1.677      ;
+; 1.418 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 0.000        ; 0.000      ; 1.684      ;
+; 1.423 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; 0.000      ; 1.689      ;
+; 1.439 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.705      ;
+; 1.439 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.705      ;
+; 1.443 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.709      ;
+; 1.444 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; 0.000      ; 1.710      ;
+; 1.457 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.723      ;
+; 1.458 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.724      ;
+; 1.459 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.725      ;
+; 1.460 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.726      ;
+; 1.496 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; 0.000      ; 1.762      ;
+; 1.497 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; 0.000      ; 1.763      ;
+; 1.504 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 1.769      ;
+; 1.504 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 1.769      ;
+; 1.505 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 1.770      ;
+; 1.505 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 1.770      ;
+; 1.569 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.835      ;
+; 1.570 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.836      ;
+; 1.593 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.859      ;
+; 1.594 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.860      ;
+; 1.608 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.874      ;
+; 1.609 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.875      ;
+; 1.620 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 1.885      ;
+; 1.621 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 1.886      ;
+; 1.633 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 1.898      ;
+; 1.634 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 1.899      ;
+; 1.654 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 1.919      ;
+; 1.655 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 1.920      ;
+; 1.705 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 1.971      ;
+; 1.706 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 1.972      ;
+; 1.740 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 2.006      ;
+; 1.741 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 2.007      ;
+; 1.748 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 2.013      ;
+; 1.749 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 2.014      ;
+; 1.790 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 2.055      ;
+; 1.791 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 2.056      ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Slow Model Minimum Pulse Width: 'clock'                                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|A                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|A                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|P                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|P                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|erro_id                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|erro_id                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|senha_id                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|senha_id                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|A|clk                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|A|clk                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|P|clk                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|P|clk                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|erro_id|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|erro_id|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|erro_reset|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|erro_reset|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.abrir|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.abrir|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.aguardar|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.aguardar|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.erro|clk                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.erro|clk                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.estado0|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.estado0|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.inicio|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.inicio|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.registrar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.registrar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.reiniciar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.reiniciar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.verificar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.verificar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|senha_id|clk                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|senha_id|clk                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarErro|QRR[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoOperacional|registrarErro|QRR[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarErro|QRR[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoOperacional|registrarErro|QRR[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[0]|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[0]|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[10]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[10]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[11]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[11]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[12]|clk                    ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; go            ; clock      ; 0.945 ; 0.945 ; Rise       ; clock           ;
+; password[*]   ; clock      ; 5.369 ; 5.369 ; Rise       ; clock           ;
+;  password[0]  ; clock      ; 1.750 ; 1.750 ; Rise       ; clock           ;
+;  password[1]  ; clock      ; 5.075 ; 5.075 ; Rise       ; clock           ;
+;  password[2]  ; clock      ; 4.976 ; 4.976 ; Rise       ; clock           ;
+;  password[3]  ; clock      ; 5.369 ; 5.369 ; Rise       ; clock           ;
+;  password[4]  ; clock      ; 4.856 ; 4.856 ; Rise       ; clock           ;
+;  password[5]  ; clock      ; 5.203 ; 5.203 ; Rise       ; clock           ;
+;  password[6]  ; clock      ; 5.206 ; 5.206 ; Rise       ; clock           ;
+;  password[7]  ; clock      ; 4.713 ; 4.713 ; Rise       ; clock           ;
+;  password[8]  ; clock      ; 4.678 ; 4.678 ; Rise       ; clock           ;
+;  password[9]  ; clock      ; 4.926 ; 4.926 ; Rise       ; clock           ;
+;  password[10] ; clock      ; 4.643 ; 4.643 ; Rise       ; clock           ;
+;  password[11] ; clock      ; 4.985 ; 4.985 ; Rise       ; clock           ;
+;  password[12] ; clock      ; 4.869 ; 4.869 ; Rise       ; clock           ;
+;  password[13] ; clock      ; 4.959 ; 4.959 ; Rise       ; clock           ;
+;  password[14] ; clock      ; 5.050 ; 5.050 ; Rise       ; clock           ;
+;  password[15] ; clock      ; 4.912 ; 4.912 ; Rise       ; clock           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; go            ; clock      ; 0.267  ; 0.267  ; Rise       ; clock           ;
+; password[*]   ; clock      ; 0.242  ; 0.242  ; Rise       ; clock           ;
+;  password[0]  ; clock      ; 0.242  ; 0.242  ; Rise       ; clock           ;
+;  password[1]  ; clock      ; -3.170 ; -3.170 ; Rise       ; clock           ;
+;  password[2]  ; clock      ; -3.081 ; -3.081 ; Rise       ; clock           ;
+;  password[3]  ; clock      ; -3.193 ; -3.193 ; Rise       ; clock           ;
+;  password[4]  ; clock      ; -3.076 ; -3.076 ; Rise       ; clock           ;
+;  password[5]  ; clock      ; -3.283 ; -3.283 ; Rise       ; clock           ;
+;  password[6]  ; clock      ; -3.315 ; -3.315 ; Rise       ; clock           ;
+;  password[7]  ; clock      ; -3.064 ; -3.064 ; Rise       ; clock           ;
+;  password[8]  ; clock      ; -3.087 ; -3.087 ; Rise       ; clock           ;
+;  password[9]  ; clock      ; -3.185 ; -3.185 ; Rise       ; clock           ;
+;  password[10] ; clock      ; -2.899 ; -2.899 ; Rise       ; clock           ;
+;  password[11] ; clock      ; -3.324 ; -3.324 ; Rise       ; clock           ;
+;  password[12] ; clock      ; -3.128 ; -3.128 ; Rise       ; clock           ;
+;  password[13] ; clock      ; -3.096 ; -3.096 ; Rise       ; clock           ;
+;  password[14] ; clock      ; -3.319 ; -3.319 ; Rise       ; clock           ;
+;  password[15] ; clock      ; -2.953 ; -2.953 ; Rise       ; clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; A         ; clock      ; 6.586 ; 6.586 ; Rise       ; clock           ;
+; P         ; clock      ; 6.578 ; 6.578 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; A         ; clock      ; 6.586 ; 6.586 ; Rise       ; clock           ;
+; P         ; clock      ; 6.578 ; 6.578 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------+
+; Fast Model Setup Summary      ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.080 ; 0.000         ;
++-------+-------+---------------+
+
+
++-------------------------------+
+; Fast Model Hold Summary       ;
++-------+-------+---------------+
+; Clock ; Slack ; End Point TNS ;
++-------+-------+---------------+
+; clock ; 0.215 ; 0.000         ;
++-------+-------+---------------+
+
+
+-------------------------------
+; Fast Model Recovery Summary ;
+-------------------------------
+No paths to report.
+
+
+------------------------------
+; Fast Model Removal Summary ;
+------------------------------
+No paths to report.
+
+
++----------------------------------------+
+; Fast Model Minimum Pulse Width Summary ;
++-------+--------+-----------------------+
+; Clock ; Slack  ; End Point TNS         ;
++-------+--------+-----------------------+
+; clock ; -1.380 ; -32.380               ;
++-------+--------+-----------------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Setup: 'clock'                                                                                                                                                                                             ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.080 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 0.951      ;
+; 0.081 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 0.950      ;
+; 0.104 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 0.927      ;
+; 0.105 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 0.926      ;
+; 0.110 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 0.921      ;
+; 0.111 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 0.920      ;
+; 0.113 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.919      ;
+; 0.114 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 0.918      ;
+; 0.127 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 0.904      ;
+; 0.128 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 0.903      ;
+; 0.130 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.902      ;
+; 0.131 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 0.901      ;
+; 0.141 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.891      ;
+; 0.142 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 0.890      ;
+; 0.149 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.883      ;
+; 0.149 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.883      ;
+; 0.151 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 0.880      ;
+; 0.152 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 0.879      ;
+; 0.159 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.873      ;
+; 0.160 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 0.872      ;
+; 0.174 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 0.857      ;
+; 0.175 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.857      ;
+; 0.175 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 0.856      ;
+; 0.176 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 0.856      ;
+; 0.195 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.837      ;
+; 0.195 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.837      ;
+; 0.203 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.829      ;
+; 0.204 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 0.828      ;
+; 0.217 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; 0.000      ; 0.815      ;
+; 0.218 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; 0.000      ; 0.814      ;
+; 0.222 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 0.809      ;
+; 0.223 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 0.808      ;
+; 0.226 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; 0.000      ; 0.806      ;
+; 0.227 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; 0.000      ; 0.805      ;
+; 0.239 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; -0.001     ; 0.792      ;
+; 0.240 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; -0.001     ; 0.791      ;
+; 0.246 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; -0.001     ; 0.785      ;
+; 0.247 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; -0.001     ; 0.784      ;
+; 0.252 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.780      ;
+; 0.253 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 0.779      ;
+; 0.254 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; 0.000      ; 0.778      ;
+; 0.255 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 1.000        ; 0.000      ; 0.777      ;
+; 0.264 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 1.000        ; 0.001      ; 0.769      ;
+; 0.264 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 0.768      ;
+; 0.276 ; blocoDeControle:chamarBlocoDeControle|A                            ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; 0.000      ; 0.756      ;
+; 0.279 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.753      ;
+; 0.282 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.750      ;
+; 0.283 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.000      ; 0.749      ;
+; 0.285 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; 0.000      ; 0.747      ;
+; 0.290 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; 0.000      ; 0.742      ;
+; 0.291 ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 1.000        ; 0.001      ; 0.742      ;
+; 0.300 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; -0.001     ; 0.731      ;
+; 0.303 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; clock        ; clock       ; 1.000        ; 0.001      ; 0.730      ;
+; 0.303 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; clock        ; clock       ; 1.000        ; 0.001      ; 0.730      ;
+; 0.303 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; clock        ; clock       ; 1.000        ; 0.001      ; 0.730      ;
+; 0.303 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; clock        ; clock       ; 1.000        ; 0.001      ; 0.730      ;
+; 0.303 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; clock        ; clock       ; 1.000        ; 0.001      ; 0.730      ;
+; 0.303 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; clock        ; clock       ; 1.000        ; 0.001      ; 0.730      ;
+; 0.303 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; clock        ; clock       ; 1.000        ; 0.001      ; 0.730      ;
+; 0.303 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; clock        ; clock       ; 1.000        ; 0.001      ; 0.730      ;
+; 0.307 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 1.000        ; 0.001      ; 0.726      ;
+; 0.324 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 1.000        ; 0.001      ; 0.709      ;
+; 0.325 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; -0.001     ; 0.706      ;
+; 0.341 ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; 0.000      ; 0.691      ;
+; 0.345 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; 0.000      ; 0.687      ;
+; 0.356 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; -0.001     ; 0.675      ;
+; 0.358 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; -0.001     ; 0.673      ;
+; 0.369 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.663      ;
+; 0.369 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.663      ;
+; 0.369 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.663      ;
+; 0.369 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.663      ;
+; 0.369 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.663      ;
+; 0.369 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.663      ;
+; 0.369 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.663      ;
+; 0.369 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.663      ;
+; 0.407 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 1.000        ; -0.001     ; 0.624      ;
+; 0.407 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; -0.001     ; 0.624      ;
+; 0.411 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; -0.001     ; 0.620      ;
+; 0.414 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; 0.000      ; 0.618      ;
+; 0.415 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; 0.000      ; 0.617      ;
+; 0.417 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 1.000        ; 0.001      ; 0.616      ;
+; 0.424 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; -0.001     ; 0.607      ;
+; 0.428 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 1.000        ; 0.001      ; 0.605      ;
+; 0.429 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 1.000        ; 0.001      ; 0.604      ;
+; 0.524 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; -0.001     ; 0.507      ;
+; 0.527 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 1.000        ; -0.001     ; 0.504      ;
+; 0.528 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 1.000        ; -0.001     ; 0.503      ;
+; 0.553 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; clock        ; clock       ; 1.000        ; -0.001     ; 0.478      ;
+; 0.580 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 1.000        ; 0.000      ; 0.452      ;
+; 0.632 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 1.000        ; 0.000      ; 0.400      ;
+; 0.633 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.399      ;
+; 0.636 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.396      ;
+; 0.665 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; blocoDeControle:chamarBlocoDeControle|P                            ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
+; 0.665 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 1.000        ; 0.000      ; 0.367      ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Hold: 'clock'                                                                                                                                                                                              ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; Slack ; From Node                                                          ; To Node                                                            ; Launch Clock ; Latch Clock ; Relationship ; Clock Skew ; Data Delay ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+; 0.215 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.215 ; blocoDeControle:chamarBlocoDeControle|P                            ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.367      ;
+; 0.244 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.396      ;
+; 0.247 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.399      ;
+; 0.248 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 0.000        ; 0.000      ; 0.400      ;
+; 0.249 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.401      ;
+; 0.300 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.452      ;
+; 0.327 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; clock        ; clock       ; 0.000        ; -0.001     ; 0.478      ;
+; 0.352 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 0.000        ; -0.001     ; 0.503      ;
+; 0.353 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; -0.001     ; 0.504      ;
+; 0.356 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; -0.001     ; 0.507      ;
+; 0.383 ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.535      ;
+; 0.451 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 0.000        ; 0.001      ; 0.604      ;
+; 0.452 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; clock        ; clock       ; 0.000        ; 0.001      ; 0.605      ;
+; 0.456 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; -0.001     ; 0.607      ;
+; 0.463 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.001      ; 0.616      ;
+; 0.465 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.617      ;
+; 0.466 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.618      ;
+; 0.469 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; -0.001     ; 0.620      ;
+; 0.473 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|erro_id                      ; clock        ; clock       ; 0.000        ; -0.001     ; 0.624      ;
+; 0.473 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; -0.001     ; 0.624      ;
+; 0.511 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.511 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.663      ;
+; 0.522 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; -0.001     ; 0.673      ;
+; 0.524 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; -0.001     ; 0.675      ;
+; 0.535 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.687      ;
+; 0.539 ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.691      ;
+; 0.555 ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; -0.001     ; 0.706      ;
+; 0.556 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.001      ; 0.709      ;
+; 0.573 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 0.000        ; 0.001      ; 0.726      ;
+; 0.577 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; clock        ; clock       ; 0.000        ; 0.001      ; 0.730      ;
+; 0.577 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; clock        ; clock       ; 0.000        ; 0.001      ; 0.730      ;
+; 0.577 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; clock        ; clock       ; 0.000        ; 0.001      ; 0.730      ;
+; 0.577 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; clock        ; clock       ; 0.000        ; 0.001      ; 0.730      ;
+; 0.577 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; clock        ; clock       ; 0.000        ; 0.001      ; 0.730      ;
+; 0.577 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; clock        ; clock       ; 0.000        ; 0.001      ; 0.730      ;
+; 0.577 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; clock        ; clock       ; 0.000        ; 0.001      ; 0.730      ;
+; 0.577 ; blocoDeControle:chamarBlocoDeControle|senha_id                     ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; clock        ; clock       ; 0.000        ; 0.001      ; 0.730      ;
+; 0.580 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; -0.001     ; 0.731      ;
+; 0.589 ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 0.000        ; 0.001      ; 0.742      ;
+; 0.590 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.742      ;
+; 0.595 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.747      ;
+; 0.597 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.749      ;
+; 0.598 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.750      ;
+; 0.601 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 0.000        ; 0.000      ; 0.753      ;
+; 0.604 ; blocoDeControle:chamarBlocoDeControle|A                            ; blocoDeControle:chamarBlocoDeControle|A                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.756      ;
+; 0.616 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.768      ;
+; 0.616 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ; clock        ; clock       ; 0.000        ; 0.001      ; 0.769      ;
+; 0.625 ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ; clock        ; clock       ; 0.000        ; 0.000      ; 0.777      ;
+; 0.626 ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ; clock        ; clock       ; 0.000        ; 0.000      ; 0.778      ;
+; 0.627 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.779      ;
+; 0.628 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.780      ;
+; 0.633 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 0.784      ;
+; 0.634 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 0.785      ;
+; 0.640 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; -0.001     ; 0.791      ;
+; 0.641 ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; -0.001     ; 0.792      ;
+; 0.653 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.805      ;
+; 0.654 ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.806      ;
+; 0.657 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 0.808      ;
+; 0.658 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 0.809      ;
+; 0.662 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|P                            ; clock        ; clock       ; 0.000        ; 0.000      ; 0.814      ;
+; 0.663 ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; clock        ; clock       ; 0.000        ; 0.000      ; 0.815      ;
+; 0.676 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.828      ;
+; 0.677 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.829      ;
+; 0.704 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.856      ;
+; 0.705 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 0.856      ;
+; 0.705 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.857      ;
+; 0.706 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 0.857      ;
+; 0.720 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.872      ;
+; 0.721 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.873      ;
+; 0.728 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 0.879      ;
+; 0.729 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 0.880      ;
+; 0.731 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.883      ;
+; 0.731 ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.883      ;
+; 0.738 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.890      ;
+; 0.739 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.891      ;
+; 0.749 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.901      ;
+; 0.750 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.902      ;
+; 0.752 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 0.903      ;
+; 0.753 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 0.904      ;
+; 0.766 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; 0.000      ; 0.918      ;
+; 0.767 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; 0.000      ; 0.919      ;
+; 0.769 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 0.920      ;
+; 0.770 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 0.921      ;
+; 0.775 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 0.926      ;
+; 0.776 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 0.927      ;
+; 0.799 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ; clock        ; clock       ; 0.000        ; -0.001     ; 0.950      ;
+; 0.800 ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ; clock        ; clock       ; 0.000        ; -0.001     ; 0.951      ;
++-------+--------------------------------------------------------------------+--------------------------------------------------------------------+--------------+-------------+--------------+------------+------------+
+
+
++-----------------------------------------------------------------------------------------------------------------------------------------------------+
+; Fast Model Minimum Pulse Width: 'clock'                                                                                                             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------+
+; Slack  ; Actual Width ; Required Width ; Type             ; Clock ; Clock Edge ; Target                                                             ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------+
+; -1.380 ; 1.000        ; 2.380          ; Port Rate        ; clock ; Rise       ; clock                                                              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|A                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|A                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|P                            ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|P                            ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|erro_id                      ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|erro_id                      ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|erro_reset                   ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.abrir                 ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.aguardar              ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.erro                  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.estado0               ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.inicio                ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.registrar             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.reiniciar             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|estado.verificar             ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|senha_id                     ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoDeControle:chamarBlocoDeControle|senha_id                     ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|erro:registrarErro|QRR[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[0]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[10] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[11] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[12] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[13] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[14] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[15] ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[1]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[2]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[3]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[4]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[5]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[6]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[7]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[8]  ;
+; -0.500 ; 0.500        ; 1.000          ; High Pulse Width ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ;
+; -0.500 ; 0.500        ; 1.000          ; Low Pulse Width  ; clock ; Rise       ; blocoOperacional:chamarBlocoOperacional|senha:registrarSenha|Q[9]  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|A|clk                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|A|clk                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|P|clk                                        ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|P|clk                                        ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|erro_id|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|erro_id|clk                                  ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|erro_reset|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|erro_reset|clk                               ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.abrir|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.abrir|clk                             ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.aguardar|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.aguardar|clk                          ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.erro|clk                              ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.erro|clk                              ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.estado0|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.estado0|clk                           ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.inicio|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.inicio|clk                            ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.registrar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.registrar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.reiniciar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.reiniciar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|estado.verificar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|estado.verificar|clk                         ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoDeControle|senha_id|clk                                 ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoDeControle|senha_id|clk                                 ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarErro|QRR[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoOperacional|registrarErro|QRR[0]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarErro|QRR[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoOperacional|registrarErro|QRR[1]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[0]|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[0]|clk                     ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[10]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[10]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[11]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; Low Pulse Width  ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[11]|clk                    ;
+; 0.500  ; 0.500        ; 0.000          ; High Pulse Width ; clock ; Rise       ; chamarBlocoOperacional|registrarSenha|Q[12]|clk                    ;
++--------+--------------+----------------+------------------+-------+------------+--------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; go            ; clock      ; 0.073 ; 0.073 ; Rise       ; clock           ;
+; password[*]   ; clock      ; 2.703 ; 2.703 ; Rise       ; clock           ;
+;  password[0]  ; clock      ; 0.433 ; 0.433 ; Rise       ; clock           ;
+;  password[1]  ; clock      ; 2.549 ; 2.549 ; Rise       ; clock           ;
+;  password[2]  ; clock      ; 2.495 ; 2.495 ; Rise       ; clock           ;
+;  password[3]  ; clock      ; 2.703 ; 2.703 ; Rise       ; clock           ;
+;  password[4]  ; clock      ; 2.478 ; 2.478 ; Rise       ; clock           ;
+;  password[5]  ; clock      ; 2.617 ; 2.617 ; Rise       ; clock           ;
+;  password[6]  ; clock      ; 2.627 ; 2.627 ; Rise       ; clock           ;
+;  password[7]  ; clock      ; 2.391 ; 2.391 ; Rise       ; clock           ;
+;  password[8]  ; clock      ; 2.380 ; 2.380 ; Rise       ; clock           ;
+;  password[9]  ; clock      ; 2.506 ; 2.506 ; Rise       ; clock           ;
+;  password[10] ; clock      ; 2.376 ; 2.376 ; Rise       ; clock           ;
+;  password[11] ; clock      ; 2.511 ; 2.511 ; Rise       ; clock           ;
+;  password[12] ; clock      ; 2.446 ; 2.446 ; Rise       ; clock           ;
+;  password[13] ; clock      ; 2.525 ; 2.525 ; Rise       ; clock           ;
+;  password[14] ; clock      ; 2.540 ; 2.540 ; Rise       ; clock           ;
+;  password[15] ; clock      ; 2.500 ; 2.500 ; Rise       ; clock           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; go            ; clock      ; 0.475  ; 0.475  ; Rise       ; clock           ;
+; password[*]   ; clock      ; 0.458  ; 0.458  ; Rise       ; clock           ;
+;  password[0]  ; clock      ; 0.458  ; 0.458  ; Rise       ; clock           ;
+;  password[1]  ; clock      ; -1.693 ; -1.693 ; Rise       ; clock           ;
+;  password[2]  ; clock      ; -1.679 ; -1.679 ; Rise       ; clock           ;
+;  password[3]  ; clock      ; -1.715 ; -1.715 ; Rise       ; clock           ;
+;  password[4]  ; clock      ; -1.678 ; -1.678 ; Rise       ; clock           ;
+;  password[5]  ; clock      ; -1.761 ; -1.761 ; Rise       ; clock           ;
+;  password[6]  ; clock      ; -1.780 ; -1.780 ; Rise       ; clock           ;
+;  password[7]  ; clock      ; -1.680 ; -1.680 ; Rise       ; clock           ;
+;  password[8]  ; clock      ; -1.686 ; -1.686 ; Rise       ; clock           ;
+;  password[9]  ; clock      ; -1.711 ; -1.711 ; Rise       ; clock           ;
+;  password[10] ; clock      ; -1.578 ; -1.578 ; Rise       ; clock           ;
+;  password[11] ; clock      ; -1.792 ; -1.792 ; Rise       ; clock           ;
+;  password[12] ; clock      ; -1.660 ; -1.660 ; Rise       ; clock           ;
+;  password[13] ; clock      ; -1.694 ; -1.694 ; Rise       ; clock           ;
+;  password[14] ; clock      ; -1.789 ; -1.789 ; Rise       ; clock           ;
+;  password[15] ; clock      ; -1.595 ; -1.595 ; Rise       ; clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; A         ; clock      ; 3.745 ; 3.745 ; Rise       ; clock           ;
+; P         ; clock      ; 3.742 ; 3.742 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; A         ; clock      ; 3.745 ; 3.745 ; Rise       ; clock           ;
+; P         ; clock      ; 3.742 ; 3.742 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------------------+
+; Multicorner Timing Analysis Summary                                           ;
++------------------+---------+-------+----------+---------+---------------------+
+; Clock            ; Setup   ; Hold  ; Recovery ; Removal ; Minimum Pulse Width ;
++------------------+---------+-------+----------+---------+---------------------+
+; Worst-case Slack ; -1.021  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+;  clock           ; -1.021  ; 0.215 ; N/A      ; N/A     ; -1.380              ;
+; Design-wide TNS  ; -11.557 ; 0.0   ; 0.0      ; 0.0     ; -32.38              ;
+;  clock           ; -11.557 ; 0.000 ; N/A      ; N/A     ; -32.380             ;
++------------------+---------+-------+----------+---------+---------------------+
+
+
++---------------------------------------------------------------------------+
+; Setup Times                                                               ;
++---------------+------------+-------+-------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++---------------+------------+-------+-------+------------+-----------------+
+; go            ; clock      ; 0.945 ; 0.945 ; Rise       ; clock           ;
+; password[*]   ; clock      ; 5.369 ; 5.369 ; Rise       ; clock           ;
+;  password[0]  ; clock      ; 1.750 ; 1.750 ; Rise       ; clock           ;
+;  password[1]  ; clock      ; 5.075 ; 5.075 ; Rise       ; clock           ;
+;  password[2]  ; clock      ; 4.976 ; 4.976 ; Rise       ; clock           ;
+;  password[3]  ; clock      ; 5.369 ; 5.369 ; Rise       ; clock           ;
+;  password[4]  ; clock      ; 4.856 ; 4.856 ; Rise       ; clock           ;
+;  password[5]  ; clock      ; 5.203 ; 5.203 ; Rise       ; clock           ;
+;  password[6]  ; clock      ; 5.206 ; 5.206 ; Rise       ; clock           ;
+;  password[7]  ; clock      ; 4.713 ; 4.713 ; Rise       ; clock           ;
+;  password[8]  ; clock      ; 4.678 ; 4.678 ; Rise       ; clock           ;
+;  password[9]  ; clock      ; 4.926 ; 4.926 ; Rise       ; clock           ;
+;  password[10] ; clock      ; 4.643 ; 4.643 ; Rise       ; clock           ;
+;  password[11] ; clock      ; 4.985 ; 4.985 ; Rise       ; clock           ;
+;  password[12] ; clock      ; 4.869 ; 4.869 ; Rise       ; clock           ;
+;  password[13] ; clock      ; 4.959 ; 4.959 ; Rise       ; clock           ;
+;  password[14] ; clock      ; 5.050 ; 5.050 ; Rise       ; clock           ;
+;  password[15] ; clock      ; 4.912 ; 4.912 ; Rise       ; clock           ;
++---------------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------------+
+; Hold Times                                                                  ;
++---------------+------------+--------+--------+------------+-----------------+
+; Data Port     ; Clock Port ; Rise   ; Fall   ; Clock Edge ; Clock Reference ;
++---------------+------------+--------+--------+------------+-----------------+
+; go            ; clock      ; 0.475  ; 0.475  ; Rise       ; clock           ;
+; password[*]   ; clock      ; 0.458  ; 0.458  ; Rise       ; clock           ;
+;  password[0]  ; clock      ; 0.458  ; 0.458  ; Rise       ; clock           ;
+;  password[1]  ; clock      ; -1.693 ; -1.693 ; Rise       ; clock           ;
+;  password[2]  ; clock      ; -1.679 ; -1.679 ; Rise       ; clock           ;
+;  password[3]  ; clock      ; -1.715 ; -1.715 ; Rise       ; clock           ;
+;  password[4]  ; clock      ; -1.678 ; -1.678 ; Rise       ; clock           ;
+;  password[5]  ; clock      ; -1.761 ; -1.761 ; Rise       ; clock           ;
+;  password[6]  ; clock      ; -1.780 ; -1.780 ; Rise       ; clock           ;
+;  password[7]  ; clock      ; -1.680 ; -1.680 ; Rise       ; clock           ;
+;  password[8]  ; clock      ; -1.686 ; -1.686 ; Rise       ; clock           ;
+;  password[9]  ; clock      ; -1.711 ; -1.711 ; Rise       ; clock           ;
+;  password[10] ; clock      ; -1.578 ; -1.578 ; Rise       ; clock           ;
+;  password[11] ; clock      ; -1.792 ; -1.792 ; Rise       ; clock           ;
+;  password[12] ; clock      ; -1.660 ; -1.660 ; Rise       ; clock           ;
+;  password[13] ; clock      ; -1.694 ; -1.694 ; Rise       ; clock           ;
+;  password[14] ; clock      ; -1.789 ; -1.789 ; Rise       ; clock           ;
+;  password[15] ; clock      ; -1.595 ; -1.595 ; Rise       ; clock           ;
++---------------+------------+--------+--------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Clock to Output Times                                                 ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; A         ; clock      ; 6.586 ; 6.586 ; Rise       ; clock           ;
+; P         ; clock      ; 6.578 ; 6.578 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-----------------------------------------------------------------------+
+; Minimum Clock to Output Times                                         ;
++-----------+------------+-------+-------+------------+-----------------+
+; Data Port ; Clock Port ; Rise  ; Fall  ; Clock Edge ; Clock Reference ;
++-----------+------------+-------+-------+------------+-----------------+
+; A         ; clock      ; 3.745 ; 3.745 ; Rise       ; clock           ;
+; P         ; clock      ; 3.742 ; 3.742 ; Rise       ; clock           ;
++-----------+------------+-------+-------+------------+-----------------+
+
+
++-------------------------------------------------------------------+
+; Setup Transfers                                                   ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 102      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
++-------------------------------------------------------------------+
+; Hold Transfers                                                    ;
++------------+----------+----------+----------+----------+----------+
+; From Clock ; To Clock ; RR Paths ; FR Paths ; RF Paths ; FF Paths ;
++------------+----------+----------+----------+----------+----------+
+; clock      ; clock    ; 102      ; 0        ; 0        ; 0        ;
++------------+----------+----------+----------+----------+----------+
+Entries labeled "false path" only account for clock-to-clock false paths and not path-based false paths. As a result, actual path counts may be lower than reported.
+
+
+---------------
+; Report TCCS ;
+---------------
+No dedicated SERDES Transmitter circuitry present in device or used in design
+
+
+---------------
+; Report RSKM ;
+---------------
+No dedicated SERDES Receiver circuitry present in device or used in design
+
+
++------------------------------------------------+
+; Unconstrained Paths                            ;
++---------------------------------+-------+------+
+; Property                        ; Setup ; Hold ;
++---------------------------------+-------+------+
+; Illegal Clocks                  ; 0     ; 0    ;
+; Unconstrained Clocks            ; 0     ; 0    ;
+; Unconstrained Input Ports       ; 17    ; 17   ;
+; Unconstrained Input Port Paths  ; 85    ; 85   ;
+; Unconstrained Output Ports      ; 2     ; 2    ;
+; Unconstrained Output Port Paths ; 2     ; 2    ;
++---------------------------------+-------+------+
+
+
++------------------------------------+
+; TimeQuest Timing Analyzer Messages ;
++------------------------------------+
+Info: *******************************************************************
+Info: Running Quartus II 64-Bit TimeQuest Timing Analyzer
+    Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
+    Info: Processing started: Thu Nov 05 17:00:34 2020
+Info: Command: quartus_sta cofreAutomatico -c cofreAutomatico
+Info: qsta_default_script.tcl version: #1
+Warning (20028): Parallel compilation is not licensed and has been disabled
+Info (21077): Low junction temperature is 0 degrees C
+Info (21077): High junction temperature is 85 degrees C
+Critical Warning (332012): Synopsys Design Constraints File file not found: 'cofreAutomatico.sdc'. A Synopsys Design Constraints File is required by the TimeQuest Timing Analyzer to get proper timing constraints. Without it, the Compiler will not properly optimize the design.
+Info (332142): No user constrained base clocks found in the design. Calling "derive_clocks -period 1.0"
+Info (332105): Deriving Clocks
+    Info (332105): create_clock -period 1.000 -name clock clock
+Info: Found TIMEQUEST_REPORT_SCRIPT_INCLUDE_DEFAULT_ANALYSIS = ON
+Info: Analyzing Slow Model
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case setup slack is -1.021
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.021       -11.557 clock 
+Info (332146): Worst-case hold slack is 0.391
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.391         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -32.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info: Analyzing Fast Model
+Info (332146): Worst-case setup slack is 0.080
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.080         0.000 clock 
+Info (332146): Worst-case hold slack is 0.215
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):     0.215         0.000 clock 
+Info (332140): No Recovery paths to report
+Info (332140): No Removal paths to report
+Critical Warning (332148): Timing requirements not met
+Info (332146): Worst-case minimum pulse width slack is -1.380
+    Info (332119):     Slack End Point TNS Clock 
+    Info (332119): ========= ============= =====================
+    Info (332119):    -1.380       -32.380 clock 
+Info (332001): The selected device family is not supported by the report_metastability command.
+Info (332102): Design is not fully constrained for setup requirements
+Info (332102): Design is not fully constrained for hold requirements
+Info: Quartus II 64-Bit TimeQuest Timing Analyzer was successful. 0 errors, 4 warnings
+    Info: Peak virtual memory: 4536 megabytes
+    Info: Processing ended: Thu Nov 05 17:00:40 2020
+    Info: Elapsed time: 00:00:06
+    Info: Total CPU time (on all processors): 00:00:04
+
+

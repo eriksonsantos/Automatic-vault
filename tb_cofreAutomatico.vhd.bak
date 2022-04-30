@@ -1,0 +1,111 @@
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.std_logic_unsigned.all;
+use ieee.numeric_std.all;
+
+entity tb_cofreAutomatico is
+GENERIC ( N : INTEGER := 16 ) ;
+	
+end tb_cofreAutomatico;
+
+architecture cofre of tb_cofreAutomatico is
+
+component cofreAutomatico is
+	port( 
+		
+		--ENTRADAS
+		go: in std_LOGIC;
+		clock: in std_logic;
+		password : IN STD_LOGIC_VECTOR(15 DOWNTO 0) ;
+		
+		--SAIDAS BlocoControle
+			A: out std_logic;
+			P: out std_LOGIC
+		
+
+	    );
+
+end component ;
+
+--SENHA
+signal sinal_clk:std_logic;
+signal sinal_s:std_logic_vector(N-1 DOWNTO 0);
+
+--SENHARESET
+--signal sinalsenhareset_id:std_logic;
+
+--Saida SENHA
+--signal sinal_q:std_logic_vector(N-1 DOWNTO 0);
+
+--Saida SENHARESET
+--signal sinal_qsr:std_logic_vector(N-1 DOWNTO 0);
+
+--Saida comparador senha com S
+--signal sinalsenha_eq_S:STD_LOGIC;
+
+--Saida comparador senhaReset com S
+--signal sinalsenha_Reset_eq_S:STD_LOGIC;
+
+--Registrador ERRO
+--signal sinal_inputErro:std_logic_vector(1 DOWNTO 0);
+--signal sinalErro_id:std_logic;
+--signal sinalErro_reset: std_logic;
+
+signal sinalP: std_LOGIC;
+--Saida ERRO
+--signal sinal_qrr: std_logic_vector(1 DOWNTO 0);
+
+--COMPARADOR ERRO COM 3
+--signal sinalErro_eq_tres: std_logic;
+
+signal sinalgo: std_LOGIC;
+signal sinalA: std_LOGIC;
+constant clk_period : time := 15 ns;
+
+begin
+
+process
+begin
+	sinal_clk <= '1';
+	wait for clk_period;
+	sinal_clk <= '0';
+	wait for clk_period;
+	
+end process;
+
+instancia_senha: cofreAutomatico port map(
+
+										password=>sinal_s
+										--,s_id=>sinal_senha_id
+										,clock=>sinal_clk
+										--,Q=>sinal_q
+										--,senhareset_id=>sinalsenhareset_id
+										--,QSR=>sinal_qsr
+										--,senha_eq_S=>sinalsenha_eq_S
+										--,senha_Reset_eq_S=>sinalsenha_Reset_eq_S
+										--,inputErro=>sinal_inputErro
+										--,erro_id=>sinalErro_id,erro_reset=>sinalErro_reset
+										--,QRR=>sinal_qrr
+										--,erro_eq_tres=>sinalErro_eq_tres
+										,go=>sinalgo,A=>sinalA
+										,P =>sinalP
+										
+										);
+--Registrador Senha
+
+sinal_s <= "1010010111001010","1011110111111010" after 250 ns,"0000010011010010" after 300 ns"1110010011010010" after 400 ns ;
+sinalgo <= '1', '1' after 200 ns, '1' after 250 ns, '1' after 250 ns ;
+
+--sinalErro_eq_tres <= '1', '0' after 260 ns, '1' after 300 ns, '0' after 400 ns ;
+--sinalsenha_eq_S <= '0', '1' after 200 ns, '0' after 250 ns;
+
+--Registrador SenhaReset
+--sinalsenhareset_id <= '1', '0' after 50 ns;
+
+--sinalsenha_Reset_eq_S <= '1', '0' after 260 ns, '1' after 300 ns, '0' after 400 ns;
+--Registrador Erro
+--sinal_inputErro<="10","11" after 250 ns,"01" after 400 ns ;
+--sinalErro_id<= '0', '1' after 200 ns, '0' after 350 ns ;
+--sinalErro_reset<= '1', '0' after 260 ns, '1' after 300 ns, '0' after 400 ns ;
+
+end cofre;

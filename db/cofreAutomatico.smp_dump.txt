@@ -1,0 +1,11 @@
+
+State Machine - |cofreAutomatico|blocoDeControle:chamarBlocoDeControle|estado
+Name estado.reiniciar estado.abrir estado.erro estado.verificar estado.aguardar estado.registrar estado.inicio estado.estado0 
+estado.estado0 0 0 0 0 0 0 0 0 
+estado.inicio 0 0 0 0 0 0 1 1 
+estado.registrar 0 0 0 0 0 1 0 1 
+estado.aguardar 0 0 0 0 1 0 0 1 
+estado.verificar 0 0 0 1 0 0 0 1 
+estado.erro 0 0 1 0 0 0 0 1 
+estado.abrir 0 1 0 0 0 0 0 1 
+estado.reiniciar 1 0 0 0 0 0 0 1 

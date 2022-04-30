@@ -1,0 +1,23 @@
+LIBRARY IEEE;
+use ieee.std_logic_1164.all;
+
+entity cofreAutomatico is
+	port( clock: in std_logic;
+		  D: in std_logic;
+	      Q: out std_logic
+	    );
+end cofreAutomatico;
+
+architecture RTL of cofreAutomatico is
+
+begin
+	process(clock,D)
+	begin
+		if (clock = '1') then
+			Q <= D;
+		elsif(clock = '0') then
+			Q <= '0';
+		end if;
+		
+	end process;
+end RTL;

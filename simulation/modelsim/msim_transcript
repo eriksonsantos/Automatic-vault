@@ -1,0 +1,145 @@
+# Reading C:/altera/13.0sp1/modelsim_ase/tcl/vsim/pref.tcl 
+# do cofreAutomatico_run_msim_rtl_vhdl.do 
+# if {[file exists rtl_work]} {
+# 	vdel -lib rtl_work -all
+# }
+# vlib rtl_work
+# vmap work rtl_work
+# Copying C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini
+# Modifying modelsim.ini
+# ** Warning: Copied C:\altera\13.0sp1\modelsim_ase\win32aloem/../modelsim.ini to modelsim.ini.
+#          Updated modelsim.ini.
+# 
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/somadorErro.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_SIGNED
+# -- Compiling entity somadorErro
+# -- Compiling architecture Behavior of somadorErro
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/senhaReset.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity senhaReset
+# -- Compiling architecture RTL of senhaReset
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/senha.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity senha
+# -- Compiling architecture RTL of senha
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/erro.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity erro
+# -- Compiling architecture RTL of erro
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorsenhaReset.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ComparatorSenhaReset
+# -- Compiling architecture Dataflow of ComparatorSenhaReset
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorsenha.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ComparatorSenha
+# -- Compiling architecture Dataflow of ComparatorSenha
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorerro.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Compiling entity ComparatorErro
+# -- Compiling architecture Dataflow of ComparatorErro
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/blocoOperacional.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity blocoOperacional
+# -- Compiling architecture comportamento of blocoOperacional
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/blocoDeControle.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity blocoDeControle
+# -- Compiling architecture comportamento of blocoDeControle
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/cofreAutomatico.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Compiling entity cofreAutomatico
+# -- Compiling architecture comportamento of cofreAutomatico
+# 
+# vcom -93 -work work {C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/tb_cofreAutomatico.vhd}
+# Model Technology ModelSim ALTERA vcom 10.1d Compiler 2012.11 Nov  2 2012
+# -- Loading package STANDARD
+# -- Loading package TEXTIO
+# -- Loading package std_logic_1164
+# -- Loading package std_logic_arith
+# -- Loading package STD_LOGIC_UNSIGNED
+# -- Loading package NUMERIC_STD
+# -- Compiling entity tb_cofreAutomatico
+# -- Compiling architecture cofre of tb_cofreAutomatico
+# 
+# vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs="+acc"  tb_cofreAutomatico
+# vsim -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L cycloneii -L rtl_work -L work -voptargs=\"+acc\" -t 1ps tb_cofreAutomatico 
+# Loading std.standard
+# Loading std.textio(body)
+# Loading ieee.std_logic_1164(body)
+# Loading ieee.std_logic_arith(body)
+# Loading ieee.std_logic_unsigned(body)
+# Loading ieee.numeric_std(body)
+# Loading work.tb_cofreautomatico(cofre)
+# Loading work.cofreautomatico(comportamento)
+# Loading work.blocodecontrole(comportamento)
+# Loading work.blocooperacional(comportamento)
+# Loading work.senhareset(rtl)
+# Loading work.senha(rtl)
+# Loading work.erro(rtl)
+# Loading ieee.std_logic_signed(body)
+# Loading work.somadorerro(behavior)
+# Loading work.comparatorerro(dataflow)
+# Loading work.comparatorsenha(dataflow)
+# Loading work.comparatorsenhareset(dataflow)
+# 
+# add wave *
+# view structure
+# .main_pane.structure.interior.cs.body.struct
+# view signals
+# .main_pane.objects.interior.cs.body.tree
+# run 500 ns
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cofreautomatico/instancia_senha/chamarBlocoOperacional/comparar2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cofreautomatico/instancia_senha/chamarBlocoOperacional/comparar2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cofreautomatico/instancia_senha/chamarBlocoOperacional/comparar1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cofreautomatico/instancia_senha/chamarBlocoOperacional/comparar1
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cofreautomatico/instancia_senha/chamarBlocoOperacional/ComparatorRegistradorErro
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 0  Instance: /tb_cofreautomatico/instancia_senha/chamarBlocoOperacional/somadorRegistradorErro
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_cofreautomatico/instancia_senha/chamarBlocoOperacional/comparar2
+# ** Warning: There is an 'U'|'X'|'W'|'Z'|'-' in an arithmetic operand, the result will be 'X'(es).
+#    Time: 0 ps  Iteration: 1  Instance: /tb_cofreautomatico/instancia_senha/chamarBlocoOperacional/comparar1

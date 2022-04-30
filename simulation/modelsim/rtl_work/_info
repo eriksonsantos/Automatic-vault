@@ -1,0 +1,412 @@
+m255
+K3
+13
+cModel Technology
+Z0 dC:\Users\joaop\OneDrive\햞ea de Trabalho\Projeto Final\Cofre-Automatico-FINAL\Cofre-Automatico\simulation\modelsim
+Eblocodecontrole
+Z1 w1604413117
+Z2 DPx3 std 6 textio 0 22 5>J:;AW>W0[[dW0I6EN1Q0
+Z3 DPx4 ieee 14 std_logic_1164 0 22 5=aWaoGZSMWIcH0i^f`XF1
+Z4 dC:\Users\joaop\OneDrive\햞ea de Trabalho\Projeto Final\Cofre-Automatico-FINAL\Cofre-Automatico\simulation\modelsim
+Z5 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/blocoDeControle.vhd
+Z6 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/blocoDeControle.vhd
+l0
+L6
+VcoOA]iSNmzlS<;?[c>ZCY0
+Z7 OV;C;10.1d;51
+31
+Z8 !s108 1604633589.395000
+Z9 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/blocoDeControle.vhd|
+Z10 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/blocoDeControle.vhd|
+Z11 o-93 -work work -O0
+Z12 tExplicit 1
+!s100 Kbc[@CaAX6zBb;0Tfe;_N3
+!i10b 1
+Acomportamento
+R2
+R3
+DEx4 work 15 blocodecontrole 0 22 coOA]iSNmzlS<;?[c>ZCY0
+l78
+L39
+V?5TPU[l:e0eANQ1L9;iAN1
+R7
+31
+R8
+R9
+R10
+R11
+R12
+!s100 mVzjgiG2F7B_e<gbh59[]1
+!i10b 1
+Eblocooperacional
+Z13 w1604164296
+R2
+R3
+R4
+Z14 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/blocoOperacional.vhd
+Z15 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/blocoOperacional.vhd
+l0
+L6
+Vid9Po1AgnHZYNV7R:h0UU1
+R7
+31
+Z16 !s108 1604633587.576000
+Z17 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/blocoOperacional.vhd|
+Z18 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/blocoOperacional.vhd|
+R11
+R12
+!s100 CmF;bF[N<eeYZNcPh;ZYU3
+!i10b 1
+Acomportamento
+R2
+R3
+DEx4 work 16 blocooperacional 0 22 id9Po1AgnHZYNV7R:h0UU1
+l108
+L34
+VXcT7658d8Gb]eo>ILkgNj2
+R7
+31
+R16
+R17
+R18
+R11
+R12
+!s100 j]CTYN5gi4]:MYzXK@_HB0
+!i10b 1
+Ecofreautomatico
+Z19 w1604169519
+R2
+R3
+R4
+Z20 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/cofreAutomatico.vhd
+Z21 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/cofreAutomatico.vhd
+l0
+L6
+VHhl6;iZNL8iKRG>0^1LBY1
+R7
+31
+Z22 !s108 1604633591.369000
+Z23 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/cofreAutomatico.vhd|
+Z24 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/cofreAutomatico.vhd|
+R11
+R12
+!s100 DVaZmFU<mm4aIm;_RUNkz1
+!i10b 1
+Acomportamento
+R2
+R3
+DEx4 work 15 cofreautomatico 0 22 Hhl6;iZNL8iKRG>0^1LBY1
+l87
+L22
+VP[Cl[SzRozTS6daWCzTSP0
+R7
+31
+R22
+R23
+R24
+R11
+R12
+!s100 OOIG5;fCR3O8DTD`ko75@1
+!i10b 1
+Ecomparatorerro
+Z25 w1603994587
+Z26 DPx4 ieee 15 std_logic_arith 0 22 4`Y?g_lkdn;7UL9IiJck01
+Z27 DPx4 ieee 18 std_logic_unsigned 0 22 RYmj;=TK`k=k>D@Cz`zoB3
+R2
+R3
+R4
+Z28 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorerro.vhd
+Z29 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorerro.vhd
+l0
+L6
+VS1Z0USYiMzeaI7HU>9_:J1
+R7
+31
+Z30 !s108 1604633584.957000
+Z31 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorerro.vhd|
+Z32 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorerro.vhd|
+R11
+R12
+!s100 O5IHL8FlZfddj3jhhjCY[3
+!i10b 1
+Adataflow
+R26
+R27
+R2
+R3
+DEx4 work 14 comparatorerro 0 22 S1Z0USYiMzeaI7HU>9_:J1
+l16
+L13
+VSHb9bRM=zjF@YGIYUKEBA1
+R7
+31
+R30
+R31
+R32
+R11
+R12
+!s100 K<@RoG52ISdQk>3[5IFWj3
+!i10b 1
+Ecomparatorsenha
+Z33 w1603909767
+R26
+R27
+R2
+R3
+R4
+Z34 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorsenha.vhd
+Z35 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorsenha.vhd
+l0
+L6
+V]7=O8]HhYNmkSjhG4`bGd0
+R7
+31
+Z36 !s108 1604633582.608000
+Z37 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorsenha.vhd|
+Z38 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorsenha.vhd|
+R11
+R12
+!s100 lcKKzjEjNfbh[gA>>zEXH3
+!i10b 1
+Adataflow
+R26
+R27
+R2
+R3
+DEx4 work 15 comparatorsenha 0 22 ]7=O8]HhYNmkSjhG4`bGd0
+l16
+L14
+VQSkLC`K;mLf5EH=8>zU`D3
+R7
+31
+R36
+R37
+R38
+R11
+R12
+!s100 <HzPkSN1NbJ?3Keg^V[2l3
+!i10b 1
+Ecomparatorsenhareset
+Z39 w1603910824
+R26
+R27
+R2
+R3
+R4
+Z40 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorsenhaReset.vhd
+Z41 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorsenhaReset.vhd
+l0
+L6
+VbT4Z`JGNnQ@LHPe1IFFR=3
+R7
+31
+Z42 !s108 1604633580.328000
+Z43 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorsenhaReset.vhd|
+Z44 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/comparatorsenhaReset.vhd|
+R11
+R12
+!s100 bIc0Z29H]P_R_J^ai7loh1
+!i10b 1
+Adataflow
+R26
+R27
+R2
+R3
+DEx4 work 20 comparatorsenhareset 0 22 bT4Z`JGNnQ@LHPe1IFFR=3
+l16
+L14
+V4nKXo0n=d>MDZhHBLRWBQ3
+R7
+31
+R42
+R43
+R44
+R11
+R12
+!s100 :MYh7YGiSKfS`TVCB?n6@0
+!i10b 1
+Eerro
+Z45 w1603934121
+R2
+R3
+R4
+Z46 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/erro.vhd
+Z47 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/erro.vhd
+l0
+L4
+Vn2o<UH]>NgSAF8OS582D]0
+R7
+31
+Z48 !s108 1604633578.067000
+Z49 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/erro.vhd|
+Z50 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/erro.vhd|
+R11
+R12
+!s100 jCND2=`i=Edk3JFB;ifJ50
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 4 erro 0 22 n2o<UH]>NgSAF8OS582D]0
+l15
+L14
+V:oF2GkWkzJ=[9X@T?cc4N2
+R7
+31
+R48
+R49
+R50
+R11
+R12
+!s100 5kAH8C;6cN>VY2NSFAj1G3
+!i10b 1
+Esenha
+Z51 w1603837790
+R2
+R3
+R4
+Z52 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/senha.vhd
+Z53 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/senha.vhd
+l0
+L4
+Vkm6Ri?Bo<BkbDjkOXzcB]2
+R7
+31
+Z54 !s108 1604633575.984000
+Z55 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/senha.vhd|
+Z56 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/senha.vhd|
+R11
+R12
+!s100 JI1a7dAj`?F;aUZDV];]X0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 5 senha 0 22 km6Ri?Bo<BkbDjkOXzcB]2
+l15
+L14
+Vh:9BCHDzSD0_PAJBVj@1z1
+R7
+31
+R54
+R55
+R56
+R11
+R12
+!s100 U[GB8Q:g@XJ7Y[OCHQEZD3
+!i10b 1
+Esenhareset
+Z57 w1603904178
+R2
+R3
+R4
+Z58 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/senhaReset.vhd
+Z59 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/senhaReset.vhd
+l0
+L4
+Vho2gE5h]iJ[IB?M9PJ0=J3
+R7
+31
+Z60 !s108 1604633573.794000
+Z61 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/senhaReset.vhd|
+Z62 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/senhaReset.vhd|
+R11
+R12
+!s100 fBKBiMBA5[IeAYm57^ZU>0
+!i10b 1
+Artl
+R2
+R3
+DEx4 work 10 senhareset 0 22 ho2gE5h]iJ[IB?M9PJ0=J3
+l17
+L15
+V[K[WKUG]62>b=UKCVba[i1
+R7
+31
+R60
+R61
+R62
+R11
+R12
+!s100 XEOdD=1Am@mEH]8AS8:WV1
+!i10b 1
+Esomadorerro
+Z63 w1603992061
+R26
+Z64 DPx4 ieee 16 std_logic_signed 0 22 E>OLoMaBGQ?hbGgOoNXM^1
+R2
+R3
+R4
+Z65 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/somadorErro.vhd
+Z66 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/somadorErro.vhd
+l0
+L6
+V`;1E>6c6R:;KMiZ014j:11
+R7
+31
+Z67 !s108 1604633571.151000
+Z68 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/somadorErro.vhd|
+Z69 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/somadorErro.vhd|
+R11
+R12
+!s100 aNPA5b5QH00<Iz63^h`f`1
+!i10b 1
+Abehavior
+R26
+R64
+R2
+R3
+DEx4 work 11 somadorerro 0 22 `;1E>6c6R:;KMiZ014j:11
+l20
+L16
+V;daImof0C@8kDjJf5QhCH2
+R7
+31
+R67
+R68
+R69
+R11
+R12
+!s100 8H;GM@n`E`cZWEQQX<`]O0
+!i10b 1
+Etb_cofreautomatico
+Z70 w1604633543
+Z71 DPx4 ieee 11 numeric_std 0 22 O3PF8EB`?j9=z7KT`fn941
+R26
+R27
+R2
+R3
+R4
+Z72 8C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/tb_cofreAutomatico.vhd
+Z73 FC:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/tb_cofreAutomatico.vhd
+l0
+L6
+VHSZPPmMeUl3B7M>6:>Skb1
+!s100 71BTCESC44RzQKlKAk2eR2
+R7
+31
+!i10b 1
+Z74 !s108 1604633593.064000
+Z75 !s90 -reportprogress|300|-93|-work|work|C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/tb_cofreAutomatico.vhd|
+Z76 !s107 C:/Users/joaop/OneDrive/햞ea de Trabalho/Projeto Final/Cofre-Automatico-FINAL/Cofre-Automatico/tb_cofreAutomatico.vhd|
+R11
+R12
+Acofre
+R71
+R26
+R27
+R2
+R3
+DEx4 work 18 tb_cofreautomatico 0 22 HSZPPmMeUl3B7M>6:>Skb1
+l38
+L11
+Vm52GW0WJg89OUKLo5<m1[3
+!s100 km[zgnLNkol_XW:f5^?c63
+R7
+31
+!i10b 1
+R74
+R75
+R76
+R11
+R12
